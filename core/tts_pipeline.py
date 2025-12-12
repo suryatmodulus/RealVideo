@@ -66,9 +66,9 @@ class TTSPipeline:
         }
 
         timeout = aiohttp.ClientTimeout(total=10)
-        try:
-            async with aiohttp.ClientSession(timeout=timeout) as session:
-                while True:
+        async with aiohttp.ClientSession(timeout=timeout) as session:
+            while True:
+                try:
                     text_item = await text_input_queue.get()
                     profile = text_item.get("profile", None)
                     text_input = text_item["text"]
@@ -192,9 +192,8 @@ class TTSPipeline:
 
                     await asyncio.sleep(0)
                     await self.vae_idle_event.wait()
-
-        except Exception as e:
-            logger.exception(f"Exception in LLM worker: {e}")
+                except Exception as e:
+                    logger.exception(f"Exception in LLM worker: {e}")
 
     async def tts_worker_async(
         self, sentence_queue: asyncio.Queue, output_queue: asyncio.Queue

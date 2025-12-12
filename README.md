@@ -5,6 +5,23 @@ RealVideo is a WebSocket-based video calling system that supports text input. It
 video frames. The system features a modular design with full functionality and a clean code structure.
 Visit [blog](https://z.ai/blog/realvideo) here!
 
+## Example Video
+
+
+<table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
+  <tr>
+      <td>
+          <video src="https://github.com/user-attachments/assets/4353a47f-32db-4f07-af68-c7cf4eb9b7ec" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/13a674d7-9d2b-4979-be00-3ba37664252d" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/e8e02325-5e63-4bfe-8ffc-c319cea5fe21" width="100%" controls autoplay loop></video>
+      </td>
+  </tr>
+</table>
+
 ## Features
 
 - **Text Input**: Supports text message input.
